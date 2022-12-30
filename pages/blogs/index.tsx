@@ -19,10 +19,18 @@ export default function Blog({ posts }: any) {
   return (
     <div>
       <h4>List of posts from fetch :</h4>
+
+      <Link href="/" className={styles.link}>
+        Back
+      </Link>
+      <br />
+
       <ul>
         {posts.map((post: any) => (
           <li key={post.id}>
-            <Link className={styles.link} href={`/blogs/${post.id}`}>{post.title}</Link>
+            <Link className={styles.link} href={`/blogs/${post.id}`}>
+              {post.title}
+            </Link>
           </li>
         ))}
       </ul>

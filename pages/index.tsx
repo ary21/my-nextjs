@@ -16,6 +16,7 @@ export default function Home() {
           Hello world, Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
+        <Link className={styles.link} href="/about">Click here to About Me</Link>
         <Link className={styles.link} href="/blogs">Click here to List of Blog Posts</Link>
       </main>
     </div>
