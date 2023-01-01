@@ -18,6 +18,7 @@ export default function Home() {
 
         <Link className={styles.link} href="/about">Click here to About Me</Link>
         <Link className={styles.link} href="/blogs">Click here to List of Blog Posts</Link>
+        <Link className={styles.link} href="/users">Click here to List of DB Users</Link>
       </main>
     </div>
   );

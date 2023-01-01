@@ -2,7 +2,6 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 export async function getStaticProps() {
-  console.log("getStaticProps");
   const res = await fetch(`${process.env.DOMAIN}/api/hello`);
   const data = await res.json();
   return { props: data };
