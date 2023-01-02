@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styles from "../../styles/Home.module.css";
+import styles from "@/styles/Home.module.css";
 
 export async function getStaticPaths() {
   return {
@@ -10,14 +10,14 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: any) {
-  const res = await fetch(`${process.env.DOMAIN}/api/users/${params.id}`);
+  const res = await fetch(`${process.env.HOST}/api/users/${params.id}`);
   const user = await res.json();
   return {
     props: { user },
   };
 }
 
-const BlogPage = ({ user }: any) => {
+const DetailUser = ({ user }: any) => {
   const router = useRouter();
   if (router.isFallback) return <div>Loading...</div>;
 
@@ -35,4 +35,4 @@ const BlogPage = ({ user }: any) => {
   );
 };
 
-export default BlogPage;
+export default DetailUser;

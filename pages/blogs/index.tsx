@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../../styles/Home.module.css";
+import styles from "@/styles/Home.module.css";
 
 // This function gets called at build time
 export async function getStaticProps() {

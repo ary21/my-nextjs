@@ -6,7 +6,7 @@ import * as UserService from '../@services/user';
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<User[] | User>
+  res: NextApiResponse<{ data: User[]; } | User[] | User>
 ) {
   if (req.method === API_METHOD.POST) {
     // POST Create request
@@ -16,6 +16,6 @@ export default async function handler(
   } else {
     // GET All request
     const users = await UserService.getAllUser();
-    res.status(200).json(users)
+    res.status(200).json({ data: users })
   }
 }
